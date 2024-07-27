@@ -1,3 +1,6 @@
+## Техническое задание
+Описание бизнес модели и требования см. в документе **Requirements.docx**
+
 ## Предварительные требования
  - Установить Java (версия: 21.0). См. [Amazon Corretto 21](https://docs.aws.amazon.com/corretto/latest/corretto-21-ug/downloads-list.html)
  - Убедиться, что путь к java добавлен в переменную среды PATH.
