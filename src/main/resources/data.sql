@@ -1,7 +1,8 @@
 insert into department(id, name) values
 (nextval('department_id_seq'), 'Отдел Разработки'),
 (nextval('department_id_seq'), 'Отдел Тестирования'),
-(nextval('department_id_seq'), 'Бухгалтерия');
+(nextval('department_id_seq'), 'Бухгалтерия'),
+(nextval('department_id_seq'), 'Отдел Кадров');
 
 insert into employee(id, name, salary, role, department_id) values
 (nextval('employee_id_seq'), 'Иванов Иван Иванович', 500, 'Младший Программист', 1),
