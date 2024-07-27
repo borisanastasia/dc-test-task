@@ -30,7 +30,7 @@ public class DepartmentController {
     @ResponseStatus(NO_CONTENT)
     public void deleteById(@PathVariable Long id) {
         if (employeeRepository.existsByDepartmentId(id)) {
-            throw new ResponseStatusException(BAD_REQUEST, "Can't delete department with employees attached");
+            throw new ResponseStatusException(FORBIDDEN, "Can't delete department with employees attached");
         }
 
         departmentRepository.deleteById(id);
