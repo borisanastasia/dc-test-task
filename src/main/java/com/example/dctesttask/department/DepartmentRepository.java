@@ -1,4 +1,4 @@
-package com.example.dctesttask;
+package com.example.dctesttask.department;
 
 
 import org.springframework.data.repository.CrudRepository;
