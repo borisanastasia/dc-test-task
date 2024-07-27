@@ -2,6 +2,7 @@ package com.example.dctesttask.employee;
 
 import com.example.dctesttask.department.Department;
 import com.example.dctesttask.department.DepartmentRepository;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -34,7 +35,7 @@ public class EmployeeController {
 
     @PostMapping
     @ResponseStatus(CREATED)
-    public Employee create(@RequestBody EmployeeRequest employeeRequest) {
+    public Employee create(@Valid @RequestBody EmployeeRequest employeeRequest) {
         var department = verifyDepartment(employeeRequest.getDepartmentId());
         var employee = new Employee();
 
@@ -47,7 +48,7 @@ public class EmployeeController {
     }
 
     @PutMapping("/{id}")
-    public Employee update(@PathVariable Long id, @RequestBody EmployeeRequest employeeRequest) {
+    public Employee update(@PathVariable Long id, @Valid @RequestBody EmployeeRequest employeeRequest) {
         var employee = verifyEmployee(id);
 
         if (!employee.getDepartment().getId().equals(employeeRequest.getDepartmentId())) {
